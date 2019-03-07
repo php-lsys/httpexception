@@ -13,7 +13,7 @@ class HTTP401Exception extends HTTPException {
 		$this->_auth='Basic realm="'.$realm.'"';
 		return $this;
 	}
-	public function clear_authenticate()
+	public function clearAuthenticate()
 	{
 		$this->_auth=null;
 		return $this;

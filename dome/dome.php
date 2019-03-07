@@ -10,10 +10,10 @@ class render404 implements RenderArray,RenderHTML{
     public function __construct(HTTPException $e){
         
     }
-	public function to_html(){
+	public function toHtml(){
 		return '404 page';
 	}
-	public function to_array(){
+	public function toArray(){
 		return [];
 	}
 }
@@ -29,9 +29,9 @@ try{
 	$render=$e->getRender();
 	http_response_code($e->getHttpCode());
 	if($render instanceof RenderHTML){
-		echo $render->to_html();
+		echo $render->toHtml();
 	}
 	if($render instanceof RenderArray){
-		print_r($render->to_array());
+		print_r($render->toArray());
 	}
 }
