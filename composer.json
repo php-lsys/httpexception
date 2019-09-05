@@ -2,7 +2,6 @@
 	"name" : "lsys/httpexception",
 	"type" : "library",
 	"license": "Apache-2.0",
-
 	"description" : "lsys module httpexception",
 	"autoload" : {
 		"psr-4" : {
