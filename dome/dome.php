@@ -10,10 +10,10 @@ class render404 implements RenderArray,RenderHTML{
     public function __construct(HTTPException $e){
         
     }
-	public function toHtml(){
+	public function toHtml():?string{
 		return '404 page';
 	}
-	public function toArray(){
+	public function toArray():array{
 		return [];
 	}
 }

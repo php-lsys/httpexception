@@ -7,7 +7,7 @@ class HTTP401Exception extends HTTPException {
 		if (!$this->_auth) return array();
 		return array('www-authenticate'=>$this->_auth);
 	}
-	public function authenticate($realm,$type= 'Basic')
+	public function authenticate(string $realm,string $type= 'Basic')
 	{
 		$realm=str_replace('"', "", $realm);
 		$this->_auth='Basic realm="'.$realm.'"';
