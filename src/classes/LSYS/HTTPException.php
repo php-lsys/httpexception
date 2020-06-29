@@ -7,10 +7,10 @@ class HTTPException extends \LSYS\Exception {
 		self::$_renders[get_called_class()]=$render;
 	}
 	protected $http_code = 200;
-	public function __construct(?string $message, \Exception $previous = NULL,$code=0)
+	public function __construct(?string $message, \Exception $previous = NULL,?int $code=null)
 	{
 	    if ($message==null&&$previous)$message=$previous->getMessage();
-	    if ($code==0&&$previous)$code=$previous->getCode();
+	    if ($code==null&&$previous)$code=$previous->getCode();
 	    parent::__construct($message,$code, $previous);
 	}
 	public function headers():array{
